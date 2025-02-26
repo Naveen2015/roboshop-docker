@@ -9,7 +9,7 @@ services:
     ports:
       - '80:80'
     depends_on:
-      - catalgoue
+      - catalogue
       - user
   mongodb:
     image: mongodb:v1
