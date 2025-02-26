@@ -4,11 +4,13 @@ networks:
     driver: bridge
 services:
   web:
+    image: web:v1
     container_name: web
     ports:
       - '80:80'
     depends_on:
       - catalgoue
+      - user
   mongodb:
     image: mongodb:v1
     container_name: mongodb
