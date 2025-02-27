@@ -2,6 +2,8 @@
 # Build
 #
 FROM debian:10 AS build
+RUN mkdir -p /etc/ssl/certs/java
+RUN cp /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/cacerts /etc/ssl/certs/java/
 
 RUN apt-get update && apt-get -y install maven
 
